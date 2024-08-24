@@ -1,0 +1,34 @@
+body{
+    height: 11947px;
+}
+header {
+    width: 100%;
+    height: 82px;
+    background: #FF9CBA;
+    box-shadow: 0px 2px 15.1px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    display: fixed;
+}
+
+h3 {
+    color: #292929;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #3E3E3E;
+    font-family: 'MapoBackpacking';
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.26px;
+}
+
+p {
+    color: #202020;
+    text-align: center;
+    font-family: "Godo B";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1px;
+}
