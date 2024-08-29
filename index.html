@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no,shrink-to-fit=no">
+    <title>지울림</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .white {
+            color: white;
+        }
+
+        header:hover {
+            cursor: pointer;
+        }
+
+        .dn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden; width: 1880px;">
+    <header class="header">
+        <img src="./image/logo_image.png" alt="지울림 로고">
+        <span id="sp1">소개</span>
+        <span id="sp2">활동</span>
+        <span id="sp3">특징</span>
+        <span id="sp4">결과물</span>
+        <span id="sp5">추가정보</span>
+    </header>
+    <!-- -----------------------------------페이지 스크롤, 버튼 클릭 script----------------------------------------- -->
+    <script>
+        const $header = document.getElementsByClassName('header');
+
+        const $span1 = document.getElementById('sp1');
+        $span1.addEventListener("click", () => {
+            $span1.classList.toggle('white');
+            setTimeout(() => $span1.classList.toggle('white'), 500);
+            const $location1 = document.querySelector('#page2').offsetTop;
+            window.scrollTo({
+                top: $location1 - 600, behavior: 'smooth'
+            });
+        }
+        );
+        const $span2 = document.getElementById('sp2');
+        $span2.addEventListener("click", () => {
+            $span2.classList.toggle('white');
+            setTimeout(() => $span2.classList.toggle('white'), 500);
+            const $location2 = document.querySelector('#page3').offsetTop;
+            window.scrollTo({
+                top: $location2 - 100, behavior: 'smooth'
+            });
+        }
+
+        );
+        const $span3 = document.getElementById('sp3');
+        $span3.addEventListener("click", (e) => {
+            $span3.classList.toggle('white');
+            setTimeout(() => $span3.classList.toggle('white'), 500);
+            const $location3 = document.querySelector('#page5').offsetTop;
+            window.scrollTo({
+                top: $location3, behavior: 'smooth'
+            });
+        }
+        );
+        const $span4 = document.getElementById('sp4');
+        $span4.addEventListener("click", (e) => {
+            $span4.classList.toggle('white');
+            setTimeout(() => $span4.classList.toggle('white'), 500);
+            const $location4 = document.querySelector('#page7').offsetTop;
+            window.scrollTo({
+                top: $location4 + 120, behavior: 'smooth'
+            });
+        }
+        );
+        const $span5 = document.getElementById('sp5');
+        $span5.addEventListener("click", (e) => {
+            $span5.classList.toggle('white');
+            setTimeout(() => $span5.classList.toggle('white'), 500);
+            const $location5 = document.querySelector('#page10').offsetTop;
+            window.scrollTo({
+                top: $location5, behavior: 'smooth'
+            });
+        }
+        );
+    </script>
+    <!-- -----------/header----------- -->
+    <nav>
+        <img id="qickM" src="./image/q1.png">
+        <div class="click mail dn">
+            <p>kny5076@naver.com</p>
+        </div>
+        <img id="qickC" src="./image/q2.png">
+        <div class="click call dn">
+            <p>010 - 8434 - 3632</p>
+        </div>
+        <img id="top" src="./image/q3.png">
+    </nav>
+    <!-- -----------------------------top버튼, 퀵메뉴 script---------------------------------------- -->
+    <script>
+        const $qmail = document.querySelector('#qickM')
+        console.log($qmail)
+        const $qcall = document.querySelector('#qickC');
+        const $mail = document.getElementsByClassName('mail');
+        const $call = document.getElementsByClassName('call');
+        const $top = document.querySelector('#top');
+
+        $qmail.addEventListener('mouseover', () => {
+            [...$mail].forEach(mail => mail.classList.remove('dn'))
+        });
+        $qmail.addEventListener('mouseout', () => {
+            [...$mail].forEach(mail => mail.classList.add('dn'))
+        });
+        $qcall.addEventListener('mouseover', () => {
+            [...$call].forEach(call => call.classList.remove('dn'))
+        });
+        $qcall.addEventListener('mouseout', () => {
+            [...$call].forEach(call => call.classList.add('dn'))
+        });
+
+        $qcall.addEventListener('click', () => {
+            if ($call.style.display === 'none') {
+                $call.style.display = 'block';
+            } else {
+                $call.style.display = 'none';
+            }
+        });
+        $top.addEventListener('click', () => {
+            const $location6 = document.querySelector('main').offsetTop;
+            window.scrollTo({
+                top: $location6, behavior: 'smooth'
+            });
+        })
+
+
+    </script>
+    <!-- -----------/qickmenu----------- -->
+    <main>
+        <h3>지울림이란?</h3>
+        <img src="./image/img1.png" alt="지울림">
+        <p>
+            <지울림>은 서일대학교 미디어출판학과의<br>
+                벤처창업동아리이자 잡지 제작 동아리이다.
+        </p>
+        <input type="submit" value="자세히보기" id="seeMore">
+        <button>&nbsp;></button>
+        <img src="./image/img2.png" class="bg" alt="메인 비주얼">
+    </main>
+    <script>
+        const $seeMore = document.querySelector('#seeMore');
+        console.log($seeMore)
+        $seeMore.addEventListener('click', () => {
+            const $location7 = document.querySelector('#page2').offsetTop;
+            console.log($location7)
+            window.scrollTo({
+                top: $location7 - 600, behavior: 'smooth'
+            });
+        });
+        const $more = document.querySelector('button');
+        $more.addEventListener('click', () => {
+            const $location7 = document.querySelector('#page2').offsetTop;
+            window.scrollTo({
+                top: $location7 - 600, behavior: 'smooth'
+            });
+        })
+
+    </script>
+    <!-- -----------/main page----------- -->
+    <div class="page2" id="page2">
+        <h3>지울림 소개</h3>
+        <p>지울림의 ‘지’는 한자 ‘종이 지(紙)’이며, ‘울림’은 <br>
+            ‘소리가 무엇에 부딪혀 되울려 나오는 형상 또는 그 소리’를 뜻하는 <br>
+            명사로, “종이를 통해 우리의 뜻이 반향을 불러 일으킨다”는 뜻을 담고 있다.</p>
+        <img src="./image/img3.png" alt="지울림 소개 페이지 배경">
+    </div>
+    <!-- -----------/page2----------- -->
+    <div class="page3" id="page3">
+        <div class="back"></div>
+        <h3>지울림 동아리 활동</h3>
+        <p>지울림 동아리는 잡지 <지울림>을 제작하며<br>
+                출판에 관한 지식을 처음부터 배우며,<br>
+                실무 작업을 통해 출판 전문가로<br>
+                성장할 기회를 지닐 수 있는 동아리이다.</p>
+        <img src="./image/img4.png" class="bg1" alt="동아리 활동 페이지 배경">
+        <img src="./image/img4-1.png" alt="책을 읽고 있는 여자">
+    </div>
+    <!-- -----------/page3----------- -->
+    <div class="page4" id="page4">
+        <h3>활동 사진</h3>
+
+        <div class="slide1 slide5 tr1">
+            <p class="nextImg1" id="nextImg1">
+                <지울림>의 첫 만남 오리엔테이션 사진이다. <br>
+                    지울림의 모든 부원과 임원단이 모였다.
+            </p>
+            <p class="bold nextImg1">2024년 4월 16일</p>
+            <img src="./image/img5-6.png" class="image8 nextImg1" alt="활동 사진 페이지 이미지">
+        </div>
+        <div class="slide2 slide5 tr2">
+            <p class="nextImg2" id="nextImg2">
+                2023년 지울림 활동의 결과물이다. <br>
+                옆의 사진은 제작 후 배보처에서 찍은 사진이다.
+            </p>
+            <p class="bold nextImg2">2023년 12월 11일</p>
+            <img src="./image/img5-3.png" class="image5 nextImg2" alt="활동 사진 페이지 이미지">
+        </div>
+        <div class="slide3 slide5 tr3">
+            <p class="nextImg3" id="nextImg3">
+                그동안의 지울림이 출판했던 잡지들이다. <br>
+                2011년부터 정기적으로 발간 되고 있다.
+            </p>
+            <p class="bold nextImg3">2024년 6월 30일</p>
+            <img src="./image/img5-4.png" class="image6 nextImg3" alt="활동 사진 페이지 이미지">
+        </div>
+        <div class="slide4 slide5 tr4">
+            <p class="nextImg4" id="nextImg4">
+                지울림 잡지의 내부 페이지다. <br>
+                최근 유행했던 엠비티아이 관련 내용을 다루고 있다.
+            </p>
+            <p class="bold nextImg4">2023년 8월 9일</p>
+            <img src="./image/img5-5.png" class="image7 nextImg4" alt="활동 사진 페이지 이미지">
+        </div>
+        <input type="button" name="pre" id="pre" value="이전">
+        <input type="button" name="next" id="next" value="다음">
+        <img src="./image/img5.png" class="bg2" alt="활동 사진 페이지 배경">
+        <img src="./image/img5-1.png" class="image1" alt="활동 사진 페이지 이미지">
+        <img src="./image/img5-2.png" class="sp" alt="반짝이 효과">
+    </div>
+    <!-- --------------------------이미지 이전, 다음 버튼 script------------------------- -->
+    <script>
+        const $slideMove = document.querySelectorAll('.slide5');
+
+        let currentIndex = 0;
+
+        const modify = () => {
+            $slideMove.forEach((slide, index) => {
+                slide.classList.toggle('tr1', index === currentIndex)
+                slide.classList.toggle('tr2', index === (currentIndex + 1) % $slideMove.length);
+                slide.classList.toggle('tr3', index === (currentIndex + 2) % $slideMove.length);
+                slide.classList.toggle('tr4', index === (currentIndex + 3) % $slideMove.length);
+            })
+        }
+
+        const $pre = document.getElementById('pre');
+        const $next = document.getElementById('next');
+        $pre.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + $slideMove.length);
+            modify()
+        });
+
+        $next.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % $slideMove.length;
+            modify()
+        });
+
+
+    </script>
+    <!-- -----------/page4----------- -->
+    <div class="page5 slideShow" id="page5">
+        <h3>지울림의 특징</h3>
+        <div class="mySlide fade">
+            <p class="js1">무가지</p>
+            <span class="js1">: 값을 지불하지 않고도 유용한 정보를 얻을 수 있어 <br>
+                사람들의 선호도가 높아 독자층의 확보가 가능하다.</span>
+        </div>
+        <div class="mySlide fade">
+            <p class="js2">정보제공</p>
+            <span class="js2">: 다양한 정보를 얻기 위해 인터넷을 찾아보지 않아도 <br>
+                잡지에서 제공하므로 독자들의 편의를 도울 수 있다.</span>
+        </div>
+        <div class="mySlide fade">
+            <p class="js3">연구 및 기획</p>
+            <span class="js3">: 지울림만이 갖고 있는 참신한 아이디어로 독자들에게<br>
+                공감을 받고, 새로운 시대를 나타내는 아이콘이 될 수 있도록<br>
+                학생들이 직접 연구하며 기획을한다.</span>
+        </div>
+        <img src="./image/img6.png" class="bg3" alt="특징페이지 배경">
+    </div>
+    <!-- ------------------지울림 특징 슬라이드 script------------------------ -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+    <!-- -----------/page5----------- -->
+    <div class="page6" id="page6">
+        <h3>지울림 잡지 소개</h3>
+        <p>딱딱한 이미지를 지닌 기존의 책이 아닌, 대학생의 시선으로 바라본 다양하고 <br>
+            재밌는 콘텐츠를 통해 비교적 독자에게 쉽게 다가갈 수 있도록 한다. 전문인들을 <br>
+            위한 도서 잡지가 아닌, 일반인들을 위한 도서 잡지를 만드는 데에 초점을 두고 <br>
+            유용한 정보를 제공하는 무료 도서잡지이다.</p>
+        <img src="./image/img7.png" alt="잡지 소개 페이지 배경">
+        <img src="./image/img7-1.png" class="image2" alt="신문">
+        <img src="./image/img7-2.png" class="image3" alt="노트북">
+        <img src="./image/img7-3.png" class="image4" alt="핌크색 배경">
+    </div>
+    <!-- -----------/page6----------- -->
+    <div class="page7 slideShow2" id="page7">
+        <h3>지울림 잡지</h3>
+        <div class="mySlide2 fade">
+            <p class="js1">2022</p>
+            <p class="js1 gr">2022년 지울림의 주제는 독립이었다. <br>
+                행복을 뜻하는 세잎클로버를 메인 이미지로 잡아서 <br>
+                첫번째 잎, 두번째 잎, 세번째 잎으로 잡지 내용을 구성했다. 나를 <br>
+                표현하는 행복, 나와 함께하는 행복, 나의 하루를 채우는 행복에 <br>
+                대한 글을 작성하면서 부원과 자신의 행복은 무엇인지, <br>
+                이 잡지를 통해 자신만의 방법으로 행복에 도달하는 법을 <br>
+                독자들에게 전하고자 했다. </p>
+            <img src="./image/img8-2.png" alt="2022년도 잡지" class="b1">
+            <div class="bar1">
+                <div class="d1"></div>
+            </div>
+        </div>
+        <div class="mySlide2 fade">
+            <p class="js2">2023</p>
+            <p class="js2 gr">2023년 지울림의 주제는 행복이었다. <br>
+                행복을 뜻하는 세잎클로버를 메인 이미지로 잡아서 <br>
+                첫번째 잎, 두번째 잎, 세번째 잎으로 잡지 내용을 구성했다. 나를 <br>
+                표현하는 행복, 나와 함께하는 행복, 나의 하루를 채우는 행복에 <br>
+                대한 글을 작성하면서 부원과 자신의 행복은 무엇인지, <br>
+                이 잡지를 통해 자신만의 방법으로 행복에 도달하는 법을 <br>
+                독자들에게 전하고자 했다. </p>
+            <img src="./image/img8-1.png" alt="2023년도 잡지" class="b1">
+            <div class="bar1">
+                <div class="d2"></div>
+            </div>
+        </div>
+        <div class="mySlide2 fade">
+            <p class="js3">2024</p>
+            <p class="js3 gr">2024년 지울림의 주제는 언어였다. <br>
+                행복을 뜻하는 세잎클로버를 메인 이미지로 잡아서 <br>
+                첫번째 잎, 두번째 잎, 세번째 잎으로 잡지 내용을 구성했다. 나를 <br>
+                표현하는 행복, 나와 함께하는 행복, 나의 하루를 채우는 행복에 <br>
+                대한 글을 작성하면서 부원과 자신의 행복은 무엇인지, <br>
+                이 잡지를 통해 자신만의 방법으로 행복에 도달하는 법을 <br>
+                독자들에게 전하고자 했다.</p>
+            <div class="bar1">
+                <div class="d3"></div>
+            </div>
+        </div>
+
+
+        <img src="./image/img8.png" alt="지울림 잡지 페이지">
+
+    </div>
+    <!-- ------------------지울림 잡지 script------------------------ -->
+    <script>
+        var slideIndexs = 0;
+        showSlide();
+        function showSlide() {
+            var e;
+            var slide = document.getElementsByClassName("mySlide2");
+            for (e = 0; e < slide.length; e++) {
+                slide[e].style.display = "none";
+            }
+            slideIndexs++;
+            if (slideIndexs > slide.length) { slideIndexs = 1 }
+            slide[slideIndexs - 1].style.display = "block";
+            setTimeout(showSlide, 6000); // Change image every 2 seconds
+        }
+        // setInterval(,6000)
+    </script>
+    <!-- -----------/page7----------- -->
+    <div class="page8" id="page8">
+        <h3>지울림 전자책 보는법</h3>
+        <a href="https://www.youtube.com/">
+            <img src="./image/img9.png" alt="동영상 페이지 배경" class="bg3">
+        </a>
+        <img src="./image/img9-1.png" class="fr" alt="태블릿" class="tv">
+    </div>
+    <!-- -----------/page8----------- -->
+
+    <div class="page9" id="page9">
+        <h3>지울림 수상내역</h3>
+        <p class="js1 tr1 page9-Slide">2022년 서일대학교 벤처창업동아리 발표회 3위</p>
+        <p class="js2 tr2 page9-Slide">2023년 서일대학교 벤처창업동아리 발표회 3위</p>
+        <p class="js3 tr3 page9-Slide">2024년 서일대학교 벤처창업동아리 발표회 -위</p>
+        <input type="button" value="<" class="pre">
+        <input type="button" value=">" class="next">
+        <img src="./image/img10.png" alt="수상내역 페이지">
+    </div>
+    <script>
+        const reword = document.querySelectorAll('.page9-Slide');
+        const backBtn = document.querySelector('.pre');
+        const nextBtn = document.querySelector('.next');
+
+        let NowIndex = 0;
+
+        const slide9 = () => {
+            reword.forEach((slide9, index9) => {
+                slide9.classList.toggle('tr1', index9 === NowIndex);
+                slide9.classList.toggle('tr2', index9 === (NowIndex + 1) % reword.length);
+                slide9.classList.toggle('tr3', index9 === (NowIndex + 2) % reword.length);
+            })
+        }
+
+        backBtn.addEventListener('click', () => {
+            NowIndex = (NowIndex - 1 + reword.length)%reword.length;
+            slide9()
+        })
+        nextBtn.addEventListener('click', () => {
+            NowIndex = (NowIndex + 1)%reword.length;
+            slide9()
+        })
+    </script>
+    <!-- -----------/page9----------- -->
+    <div class="page10" id="page10">
+        <h3>지울림 편집장 소개</h3>
+        <p class="big">2023.03 - 2025.02</p>
+        <p class="fri">이름 : 김나연, 학번 : 202201835</p>
+        <p>이메일주소 : kny5076@naver.com</p>
+        <a href="./introducePage.html"><input type="button" value="더 보러 가기" class="link1"></a>
+        <img src="./image/img11.png" alt="편집장 소개 페이지">
+    </div>
+    <!-- -----------/page10----------- -->
+    <div class="page11" id="page11">
+        <h3>지울림 부원들의 소감</h3>
+        <div class="msg msg1">
+            <h3>편집장 김나연</h3>
+            <p>'지울림'을 통해 다양한 메시지를 독자분들께 <br>
+                전달드릴 수 있어 기쁩니다. 우리의 손 끝에서 <br>
+                탄생한 잡지가, 누군가의 일상에 잠시나마 <br>
+                녹아들 수 있다면. 또 그를 통해 독자분들의 <br>
+                마음을 울릴 수 있다면, 지울림은 목소리를 <br>
+                담아내는 것을 멈추지 않을 것입니다. <br>
+                그 여정에 함께할 수 있어 기쁩니다. 또한 <br>
+                이를 함께 만들어가고 읽어주신 모든 분들께 <br>
+                감사의 말씀을 전하고 싶습니다. </p>
+        </div>
+        <div class="msg msg2">
+            <h3>부 편집장 이용주</h3>
+            <p>'지울림'은 제가 살면서 처음으로 들어간 <br>
+                유의미한 무언가를 만들어내는 <br>
+                동아리였습니다. 우리는 무언가를 <br>
+                만들어내는 행위에서 책임감과 협동심 등<br>
+                여러가지를 배웁니다. 그 시작점으로써 <br>
+                지울림은 최고의 지점이었다고 감히 <br>
+                말할 수 있을 것 같습니다. </p>
+        </div>
+        <img src="./image/img12.png" alt="소감 페이지">
+        <a href="./MoreViewPage.html"><input type="button" value="자세히 보기" class="link2"></a>
+    </div>
+    <!-- -----------/page11----------- -->
+    <footer>
+        <input type="email" value="&nbsp;&nbsp;&nbsp;이메일 주소를 입력하고 지울림의 최신 소식을 받아보세요!">
+        <img src="./image/img13-1.png" class="link6" alt="지울림 이메일 링크">
+        <a href="https://www.instagram.com/seoiluniv/"><img src="./image/insta.png" class="link7" alt="인스타그램"></a>
+        <a href="https://www.facebook.com/seoiluniversity/"><img src="./image/facebook.png" class="link8"
+                alt="페이스북"></a>
+        <a href="https://www.youtube.com/channel/UCyL95ai0tHvmtRzBLDmYLUQ"><img src="./image/youtube.png" class="link9"
+                alt="유투브"></a>
+        <img src="./image/img13.png" alt="학과 정보">
+    </footer>
+</body>
+
+</html>
