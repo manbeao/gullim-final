@@ -1,0 +1,353 @@
+html {
+    cursor: url(./image/cusor.png) 2 2, auto;
+    user-select: none;
+    transition: all 0.7s;
+}
+
+body {
+    height: 1000px;
+    -webkit-scrollbar-track: pink;
+    -webkit-scrollbar-thumb: #FF6996;
+    z-index: -999999999999;
+
+
+}
+
+body::-webkit-scrollbar {
+    width: 23px;
+
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ffdde7;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FF9CBA;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #FF6996;
+}
+
+.dn {
+    display: none;
+}
+
+h3 {
+    color: #292929;
+    font-family: 'MapoBackpacking';
+    font-size: 71px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    z-index: 5555;
+}
+
+
+
+p {
+    color: #202020;
+    text-align: center;
+    font-family: "Godo";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 82px;
+    background: #FF9CBA;
+    box-shadow: 0px 2px 15.1px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    top: 0px;
+    z-index: 999999999;
+}
+
+header img {
+    width: 96px;
+    height: 40px;
+    margin-left: 106px;
+    margin-right: 850px;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+header img {
+    animation: logoani 3s infinite;
+}
+
+@keyframes logoani {
+    0% {
+        transform: scale(110%);
+    }
+
+    50% {
+        transform: scale(80%);
+    }
+
+
+    100% {
+        transform: scale(110%);
+    }
+}
+
+
+header span {
+    width: 140px;
+    position: absolute;
+    display: inline-block;
+    color: #202020;
+    font-family: 'MapoBackpacking';
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.5px;
+   top: 20px;
+   left: 1000px;
+}
+header span#sp2{
+    left: 1150px;
+}
+header span#sp3{
+    left: 1290px;
+}
+header span#sp4{
+    left: 1430px;
+}
+header span#sp5{
+    left: 1600px;
+}
+
+/* -----------------header----------------- */
+
+nav {
+    position: fixed;
+    width: 115px;
+    height: 307px;
+    background: #FF6996;
+    box-shadow: -3px 4px 5.6px 0px rgba(0, 0, 0, 0.25);
+    z-index: 9998;
+    left: 1700px;
+    top: 150px;
+}
+
+nav .mail {
+    background: rgba(255, 156, 186, 0.58);
+    position: absolute;
+    top: 0px;
+    right: 115px;
+    width: 400px;
+    height: 102px;
+    z-index: 99;
+    transition: all 0.7s;
+}
+
+.call {
+    background: rgba(255, 156, 186, 0.58);
+    position: absolute;
+    top: 102px;
+    right: 115px;
+    width: 400px;
+    height: 102px;
+    z-index: 100;
+    transition: all 0.7s;
+}
+
+nav div p {
+    margin-top: 35px;
+}
+
+nav img {
+    width: 78px;
+    height: 78px;
+    margin-left: 17px;
+    margin-top: 18px;
+}
+
+/* ----------------qickmenu--------------- */
+.page1 p {
+    position: absolute;
+    width: 500px;
+    left: -375px;
+    top: 710px;
+    color: #FFF;
+    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-color: #FFF;
+    font-family: 'MapoBackpacking';
+    font-size: 40px;
+    transition: all 0.7s;
+}
+
+.page1 p:hover {
+    color: #202020;
+}
+
+/* ------------------page1------------------- */
+
+.page2 #h31 {
+    width: 600px;
+    position: absolute;
+    top: 160px;
+    left: 690px;
+    font-size: 80px;
+}
+
+.page2 #h32 {
+    width: 400px;
+    position: absolute;
+    top: 335px;
+    left: 810px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.page2 #h33 {
+    width: 450px;
+    position: absolute;
+    top:850px;
+    left: 810px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.page2 p {
+    position: absolute;
+    width: 720px;
+    text-align: left;
+    top: 410px;
+    left: 815px;
+}
+
+.page2 button {
+    position: relative;
+    width: 188px;
+    height: 90px;
+    border-radius: 50px;
+    background: #FF9CBA;
+    box-shadow: 0px 4px 7.3px 0px rgba(0, 0, 0, 0.25);
+    color: #202020;
+    text-align: center;
+    font-family: "Godo";
+    font-size: 20px;
+    line-height: 144.2%;
+    border: none;
+    top: 950px;
+    left: 450px;
+    margin-left: 20px;
+    transition: all 0.7s;
+}
+
+.page2 button.num3 {
+    top: 935px;
+}
+
+.page2 button.num4 {
+    top: 935px;
+}
+
+.page2 button:hover {
+    background: #FF6996;
+    color: white;
+    top: 920px;
+}
+
+.page2 button.num6 {
+    top: 1050px;
+    left: -500px;
+}
+
+.page2 button.num7 {
+    top: 1050px;
+    left: -500px;
+}
+
+.page2 button.num8 {
+    top: 1050px;
+    left: -500px;
+}
+
+.page2 button.num9 {
+    top: 960px;
+    left: 1210px;
+}
+
+.page2 button.num10:hover {
+    background: #FF6996;
+    color: white;
+    top: 1040px;
+}
+
+.page2 button.num10.num9:hover {
+    background: #FF6996;
+    color: white;
+    top: 940px;
+}
+
+/*=--------------------page2------------------- */
+
+.page3 p {
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    font-size: 22px;
+    line-height: 179%;
+    top: 1320px;
+    left: 650px;
+}
+.page3 img{
+    position: absolute;
+    top: 30px;
+    left: -245px;
+    z-index: -1;
+}
+footer input {
+    position: absolute;
+    width: 954px;
+    height: 79px;
+    border-radius: 53px;
+    background: #F9F9F9;
+    color: rgba(141, 100, 100, 0.62);
+    font-family: "Godo";
+    font-size: 25px;
+    border: none;
+    left: 640px;
+    top: 1790px;
+}
+
+.link6 {
+    position: absolute;
+    z-index: 8888888;
+    left: 1470px;
+    top: 1805px;
+
+}
+
+.link7 {
+    position: absolute;
+    z-index: 8888898;
+    left: 1470px;
+    top: 1900px;
+}
+
+.link8 {
+    position: absolute;
+    z-index: 8888898;
+    left: 1530px;
+    top: 1900px;
+}
+
+.link9 {
+    position: absolute;
+    z-index: 8888898;
+    left: 1470px;
+    top: 1960px;
+}
+
+/*=--------------------footer------------------- */

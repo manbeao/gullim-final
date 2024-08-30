@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .white {
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./page1.css">
+    <title>지울림 소감</title>
+</head>
+
+<body style=" width: 1880px;">
+    <header class="header">
+        <img src="./image/logo_image.png" alt="지울림 로고">
+        <span id="sp1">소개</span>
+        <span id="sp2">활동</span>
+        <span id="sp3">특징</span>
+        <span id="sp4">결과물</span>
+        <span id="sp5">추가정보</span>
+    </header>
+    <script>
+        const $header = document.getElementsByClassName('header');
+        const $logo = document.querySelector('img');
+        $logo.addEventListener("click", () => {
+            location.href = 'index.html';
+        })
+        const $span1 = document.getElementById('sp1');
+        $span1.addEventListener("click", () => {
+            $span1.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span2 = document.getElementById('sp2');
+        $span2.addEventListener("click", () => {
+            $span2.classList.toggle('white');
+            location.href = 'index.html';
+        }
+
+        );
+        const $span3 = document.getElementById('sp3');
+        $span3.addEventListener("click", (e) => {
+            $span3.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span4 = document.getElementById('sp4');
+        $span4.addEventListener("click", (e) => {
+            $span4.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span5 = document.getElementById('sp5');
+        $span5.addEventListener("click", (e) => {
+            $span5.classList.toggle('white');
+            setTimeout(() => $span5.classList.toggle('white'), 500);
+            const $location5 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location5, behavior: 'smooth'
+            });
+        }
+        );
+    </script>
+    <nav>
+        <img id="qickM" src="./image/q1.png">
+        <div class="click mail dn">
+            <p>kny5076@naver.com</p>
+        </div>
+        <img id="qickC" src="./image/q2.png">
+        <div class="click call dn">
+            <p>010 - 8434 - 3632</p>
+        </div>
+        <img id="top" src="./image/q3.png">
+    </nav>
+    <!-- -----------------------------top버튼, 퀵메뉴 script---------------------------------------- -->
+    <script>
+        const $qmail = document.querySelector('#qickM')
+        console.log($qmail)
+        const $qcall = document.querySelector('#qickC');
+        const $mail = document.getElementsByClassName('mail');
+        const $call = document.getElementsByClassName('call');
+        const $top = document.querySelector('#top');
+
+        $qmail.addEventListener('mouseover', () => {
+            [...$mail].forEach(mail => mail.classList.remove('dn'))
+        });
+        $qmail.addEventListener('mouseout', () => {
+            [...$mail].forEach(mail => mail.classList.add('dn'))
+        });
+        $qcall.addEventListener('mouseover', () => {
+            [...$call].forEach(call => call.classList.remove('dn'))
+        });
+        $qcall.addEventListener('mouseout', () => {
+            [...$call].forEach(call => call.classList.add('dn'))
+        });
+
+        $qcall.addEventListener('click', () => {
+            if ($call.style.display === 'none') {
+                $call.style.display = 'block';
+            } else {
+                $call.style.display = 'none';
+            }
+        });
+        $top.addEventListener('click', () => {
+            const $location6 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location6, behavior: 'smooth'
+            });
+        })
+
+
+    </script>
+    <div class="page1">
+        <div class="group1">
+            <h3>편집장 김나연</h3><br>
+            <p>'지울림'을 통해 다양한 메시지를 독자분들께 <br>
+                전달드릴 수 있어 기쁩니다. 우리의 손 끝에서 <br>
+                탄생한 잡지가, 누군가의 일상에 잠시나마 <br>
+                녹아들 수 있다면. 또 그를 통해 독자분들의 <br>
+                마음을 울릴 수 있다면, 지울림은 목소리를 <br>
+                담아내는 것을 멈추지 않을 것입니다. 그 <br>
+                여정에 함께할 수 있어 기쁩니다. 또한 이를 <br>
+                함께 만들어가고 읽어주신 모든 분들께 <br>
+                감사의 말씀을 전하고 싶습니다.</p>
+        </div>
+        <div class="group2">
+            <h3>부 편집장 이용주</h3><br>
+            <p>'지울림'은 제가 살면서 처음으로 들어간 <br>
+                유의미한 무언가를 만들어내는 <br>
+                동아리였습니다. <br>
+                우리는 무언가를 <br>
+                만들어내는 행위에서 책임감과 협동심 등 <br>
+                여러가지를 배웁니다. <br>
+                그 시작점으로써 <br>
+                지울림은 최고의 지점이었다고 감히 <br>
+                말할 수 있을 것 같습니다.</p>
+        </div>
+        <div class="div">
+            <div class="group1 group3">
+                <h3>부 편집장 나홍원</h3><br>
+                <p>동아리 활동을 통해 원고 작성 기회를 얻어 <br>
+                    정말 좋았습니다. 짧은 내용이지만 문장을 <br>
+                    구성하는 과정에서 어려움을 느꼈습니다. <br>
+                    그럼에도 불구하고 부족한 작문력으로 <br>
+                    원고를 완성했기에 매우 뿌듯했습니다. <br>
+                    이 경험이 앞으로의 글쓰기에도 큰 도움이 <br>
+                    될 것이라고 생각합니다.</p>
+            </div>
+            <div class="group2 group4">
+                <h3>부원 김송하</h3><br>
+                <p>지울림 활동을 하는 동안 얻은 것이 정말 <br>
+                    많습니다. 잡지 제작 경험은 물론이고, <br>
+                    부원들과 하나의 결과물을 낸다는 <br>
+                    뿌듯함까지 얻을 수 있었습니다 <br>
+                     완성된 잡지를 보면서 힘들었던 작업이나, <br>
+                     잘 된 부분들을 함께 이야기하던 시간이 <br>
+                     제일 기억에 남습니다. <br>
+                     동아리 활동 경험을 바탕으로 디자인 작업이나 <br>
+                    협업에 있어 더 성장할 수 있었습니다.</p>
+            </div>
+            <div class="group1 group5">
+                <h3>부원 인지예</h3><br>
+                <p>학교생활의 처음과 끝, 3년이라는 세월을 <br>
+                    지울림과 함께 했다. 협업과 성취감 등 <br>
+                    많은 것을 배울 수 있었다. 나의 대학생활에서 <br>
+                    빼놓을 수 없는 지울림, <br>
+                    그 속에서 무한히 힘써주신 편집장님, <br>
+                    부편집장님, 팀원분들, 교수님들 모두 <br>
+                    수고 많으셨고 감사의 인사를 전한다.</p>
+            </div>
+            <div class="group2 group6">
+                <h3>부원 최세연</h3><br>
+                <p>콘텐츠 기획부터 레이아웃 디자인까지 <br>
+                    모든 단계에서 학생들의 손이 닿지 않은 <br>
+                    부분이 없었습니다. 저는 디자인팀으로서 <br>
+                    원고팀 팀원과 협업을 통해 명확한 <br>
+                    의사소통의 중요성을 알 수 있었습니다. <br>
+                    또한, 전반적으로 편집 디자인에 대한 <br>
+                    이해도를 높일 수 있었으며, 잡지 제작을 <br>
+                    통해 실무 기술을 연마할 수 있는 <br>
+                    귀중한 경험이었습니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page2">
+        <img src="./image/page1-bg.png" alt="소감 페이지 배경">
+    </div>
+    <footer>
+        <input type="email" value="&nbsp;&nbsp;&nbsp;이메일 주소를 입력하고 지울림의 최신 소식을 받아보세요!">
+        <img src="./image/img13-1.png" class="link6" alt="지울림 이메일 링크">
+        <a href="https://www.instagram.com/seoiluniv/"><img src="./image/insta.png" class="link7" alt="인스타그램"></a>
+        <a href="https://www.facebook.com/seoiluniversity/"><img src="./image/facebook.png" class="link8"
+                alt="페이스북"></a>
+        <a href="https://www.youtube.com/channel/UCyL95ai0tHvmtRzBLDmYLUQ"><img src="./image/youtube.png" class="link9"
+                alt="유투브"></a>
+    </footer>
+</body>
+
+</html>

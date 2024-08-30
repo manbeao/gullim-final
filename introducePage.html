@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편집장 소개</title>
+    <style>
+        .white {
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./page2.css">
+</head>
+
+<body  style=" width: 1880px;">
+    <header class="header">
+        <img src="./image/logo_image.png" alt="지울림 로고">
+        <span id="sp1">소개</span>
+        <span id="sp2">활동</span>
+        <span id="sp3">특징</span>
+        <span id="sp4">결과물</span>
+        <span id="sp5">추가정보</span>
+    </header>
+    <script>
+        const $header = document.getElementsByClassName('header');
+        const $logo = document.querySelector('img');
+        $logo.addEventListener("click", () => {
+            location.href = 'index.html';
+        })
+        const $span1 = document.getElementById('sp1');
+        $span1.addEventListener("click", () => {
+            $span1.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span2 = document.getElementById('sp2');
+        $span2.addEventListener("click", () => {
+            $span2.classList.toggle('white');
+            location.href = 'index.html';
+        }
+
+        );
+        const $span3 = document.getElementById('sp3');
+        $span3.addEventListener("click", (e) => {
+            $span3.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span4 = document.getElementById('sp4');
+        $span4.addEventListener("click", (e) => {
+            $span4.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span5 = document.getElementById('sp5');
+        $span5.addEventListener("click", (e) => {
+            $span5.classList.toggle('white');
+            setTimeout(() => $span5.classList.toggle('white'), 500);
+            const $location5 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location5, behavior: 'smooth'
+            });
+        }
+        );
+    </script>
+    <nav>
+        <img id="qickM" src="./image/q1.png">
+        <div class="click mail dn">
+            <p>kny5076@naver.com</p>
+        </div>
+        <img id="qickC" src="./image/q2.png">
+        <div class="click call dn">
+            <p>010 - 8434 - 3632</p>
+        </div>
+        <img id="top" src="./image/q3.png">
+    </nav>
+    <!-- -----------------------------top버튼, 퀵메뉴 script---------------------------------------- -->
+    <script>
+        const $qmail = document.querySelector('#qickM')
+        console.log($qmail)
+        const $qcall = document.querySelector('#qickC');
+        const $mail = document.getElementsByClassName('mail');
+        const $call = document.getElementsByClassName('call');
+        const $top = document.querySelector('#top');
+
+        $qmail.addEventListener('mouseover', () => {
+            [...$mail].forEach(mail => mail.classList.remove('dn'))
+        });
+        $qmail.addEventListener('mouseout', () => {
+            [...$mail].forEach(mail => mail.classList.add('dn'))
+        });
+        $qcall.addEventListener('mouseover', () => {
+            [...$call].forEach(call => call.classList.remove('dn'))
+        });
+        $qcall.addEventListener('mouseout', () => {
+            [...$call].forEach(call => call.classList.add('dn'))
+        });
+
+        $qcall.addEventListener('click', () => {
+            if ($call.style.display === 'none') {
+                $call.style.display = 'block';
+            } else {
+                $call.style.display = 'none';
+            }
+        });
+        $top.addEventListener('click', () => {
+            const $location6 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location6, behavior: 'smooth'
+            });
+        })
+
+
+    </script>
+    <div class="page1">
+        <p>202201835 김나연</p>
+    </div>
+    <div class="page2" >
+        <h3 id="h31">지울림 편집장 소개</h3>
+        <h3 id="h32">기본정보</h3>
+        <p>1. 활동사항 <br>
+            1) 2021.03 - 2021.12 : 서울신학대학교 제 38대 사회복지학과 더원 학생회 차장단<br>
+            2) 2022.03 - 2022.12 : 서일대학교 미디어출판학과 벤처창업동아리 지울림 부원<br>
+            3) 2023.03 - 2024. 02 : 서일대학교 미디어출판학과 벤처창업동아리 지울림 (2023) 편집장 <br>
+            4) 2024.03 - : 서일대학교 미디어출판학과 벤처창업 동아리 지울림 (2024) 편집장<br>
+            <br>
+            2. 수상내역<br>
+            1) 2022.10 : 제 9회 대학생 출판콘텐츠 공모전 입선<br>
+            2) 2023.10 : 제 10회 대학생 출판콘텐츠 공모전 우수 (개인 - 북커버)<br>
+            3) 2023.10 : 제 10회 대학생 출판콘텐츠 공모전 우수 (팀 - 북광고)<br>
+            4) 2023.12 : 서일대학교 『2023학년도 벤처창업동아리 성과 결과물 평가』 <지울림> 장려 (3위)<br>
+        </p>
+        <h3 id="h33">자격증 및 경력사항</h3>
+        <button class="num1">ITQ <br>아래한글
+        </button>
+        <button class="num2">ITQ <br>한글파워포인트 
+        </button>
+        <button class="num3">GTQ 2급
+        </button>
+        <button class="num4">ITQ 인터넷
+        </button>
+        <button class="num5">컴퓨터활용능력 <br> 2급
+        </button>
+        <!-- ----- -->
+         <button class="num6 num10">GTQ 1급</button>
+         <button class="num7 num10">GTQid 1급</button>
+         <button class="num8 num10">GTQi 1급</button>
+         <button class="num9 num10">GTQ <br>그래픽 마스터</button>
+       
+    </div>
+    <div class="page3"> <img src="./image/page2-bg.png" alt="상세페이지 1번 배경">
+        <p>2024.01 : 서일대학교 비즈니스일본어과 2023년도 문집 제작<br>
+            2024.05 - 2024.07 : 한국항공대학교 영자신문사 The Falcon Eyes 107호 제작
+            </p>
+    </div>
+    <footer>
+        <input type="email" value="&nbsp;&nbsp;&nbsp;이메일 주소를 입력하고 지울림의 최신 소식을 받아보세요!">
+        <img src="./image/img13-1.png" class="link6" alt="지울림 이메일 링크">
+        <a href="https://www.instagram.com/seoiluniv/"><img src="./image/insta.png" class="link7" alt="인스타그램"></a>
+        <a href="https://www.facebook.com/seoiluniversity/"><img src="./image/facebook.png" class="link8"
+                alt="페이스북"></a>
+        <a href="https://www.youtube.com/channel/UCyL95ai0tHvmtRzBLDmYLUQ"><img src="./image/youtube.png" class="link9"
+                alt="유투브"></a>
+    </footer>
+</body>
+
+</html>
